@@ -150,6 +150,15 @@
         .popup-box button:hover{
             background:#005bb5;
         }
+
+        .cancel-btn{
+            background:#e53935;
+            margin-left:10px;
+        }
+
+        .cancel-btn:hover{
+            background:#c62828;
+        }
     </style>
 </head>
 <body>
@@ -165,6 +174,7 @@
             <h3>Enter Case ID</h3>
             <input type="text" id="caseId" placeholder="Enter Case ID">
             <button onclick="checkCase()">Submit</button>
+            <button class="cancel-btn" onclick="cancelPopup()">Cancel</button>
         </div>
     </div>
 
@@ -188,10 +198,14 @@
             document.getElementById("casePopup").style.display = "flex";
         }
 
+        function cancelPopup(){
+            document.getElementById("casePopup").style.display = "none";
+        }
+
         function checkCase(){
             let id = document.getElementById("caseId").value;
 
-            if(id === "779249"){
+            if(id === "778249"){
                 window.location.href = "jacobmiller.html";
             }
             else if(id === "556221"){
